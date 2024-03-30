@@ -5,6 +5,7 @@ import Loader from './common/Loader';
 import PageTitle from './components/PageTitle';
 import ECommerce from './pages/Dashboard/ECommerce';
 import Profile from './pages/Profile';
+import { Oquvchilar } from './pages/oquvchilar';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -27,7 +28,7 @@ function App() {
           index
           element={
             <>
-              <PageTitle title="eCommerce Dashboard | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Dashboard | Admin - Admin Dashboard" />
               <ECommerce />
             </>
           }
@@ -36,8 +37,17 @@ function App() {
           path="/profile"
           element={
             <>
-              <PageTitle title="Profile | TailAdmin - Tailwind CSS Admin Dashboard Template" />
+              <PageTitle title="Profile | Admin - Admin Dashboard" />
               <Profile />
+            </>
+          }
+        />
+        <Route
+          path="/oquvchilar"
+          element={
+            <>
+              <PageTitle title="O'quvchilar | Admin - Admin Dashboard" />
+              <Oquvchilar />
             </>
           }
         />
